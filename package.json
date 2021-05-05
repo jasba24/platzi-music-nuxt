@@ -16,7 +16,6 @@
     "trae": "^1.4.2"
   },
   "devDependencies": {
-    "push-dir": "^0.4.1",
     "sass": "^1.32.12",
     "sass-loader": "^10.1.1"
   }
