@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div class="content">
-				<small>{{ track.duration_ms }}</small>
+				<small>{{ this.$MsToMm(track.duration_ms) }}</small>
 				<nav class="level">
 					<div class="level-left">
 						<button
