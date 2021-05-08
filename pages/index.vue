@@ -4,12 +4,14 @@
 			<div class="container mb-20">
 				<input
 					type="text"
-					placeholder="Buscar canciones"
+					:placeholder="$t('input')"
 					class="input is-large"
 					v-model="searchQuery"
 					@keyup.enter="search"
 				/>
-				<a @click.prevent="search" class="button is-info is-large">Buscar</a>
+				<a @click.prevent="search" class="button is-info is-large">{{
+					$t("search")
+				}}</a>
 				<a class="button is-danger is-large">&times;</a>
 			</div>
 		</nav>
@@ -41,7 +43,7 @@
 </template>
 
 <script>
-import trackService from "~/plugins/api"
+import trackService from "~/plugins/api";
 export default {
 	data() {
 		return {

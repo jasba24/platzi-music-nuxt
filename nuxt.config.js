@@ -17,11 +17,7 @@ export default {
 	css: ["~/assets/css/main.css", "~/assets/css/main.scss"],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [
-		{
-			src: "~/plugins/filters.js"
-		}
-	],
+	plugins: ["~/plugins/filters.js", "~/plugins/blur.js"],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
@@ -30,7 +26,29 @@ export default {
 	buildModules: [],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+	modules: ["nuxt-i18n"],
+
+	i18n: {
+		locales: ["en", "es"],
+		defaultLocale: "en",
+		vueI18n: {
+			fallbackLocale: "en",
+			messages: {
+				en: {
+					search: "Search",
+					about: "About",
+					input: "Search songs",
+					find: "Found"
+				},
+				es: {
+					search: "Buscar",
+					about: "Nosotros",
+					input: "Buscar canciones",
+					find: "Encontrados"
+				}
+			}
+		}
+	},
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {}

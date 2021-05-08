@@ -9,8 +9,14 @@
 						</div>
 					</div>
 					<div class="navbar-end navbar-menu">
-						<router-link class="navbar-item" to="/">Buscar</router-link>
-						<router-link class="navbar-item" to="about">Nosotros</router-link>
+						<a @click="selectLang('en')" class="navbar-item">🇺🇸</a>
+						<a @click="selectLang('es')" class="navbar-item">🇪🇸</a>
+						<router-link class="navbar-item" to="/">{{
+							$t("search")
+						}}</router-link>
+						<router-link class="navbar-item" to="about">{{
+							$t("about")
+						}}</router-link>
 					</div>
 				</div>
 			</header>
@@ -24,3 +30,13 @@
 		</div>
 	</section>
 </template>
+
+<script>
+export default {
+	methods: {
+		selectLang(lang) {
+			this.$i18n.locale = lang;
+		}
+	}
+};
+</script>
